@@ -1,1 +1,11 @@
 /* Write your CSS code here */
+.list-container {
+    display: flex;
+    flex-direction: column;
+    
+}
+.list-heading {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}

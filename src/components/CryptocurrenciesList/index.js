@@ -1,7 +1,7 @@
 // Write your JS code here
 import {Component} from 'react'
-import CryptocurrencyItem from '../CryptocurrencyItem'
 import Loader from 'react-loader-spinner'
+import CryptocurrencyItem from '../CryptocurrencyItem'
 import 'react-loader-spinner/dist/loader/css/react-spinner-loader.css'
 import './index.css'
 
@@ -37,20 +37,18 @@ class CryptocurrenciesList extends Component {
             <Loader type="TailSpin" color="#00BFFF" height={50} width={50} />
           </div>
         ) : (
-          <Table striped bordered hover>
-            <thead>
-              <tr>
-                <th>Coin Type</th>
-                <th>USD</th>
-                <th>EURO</th>
-              </tr>
-            </thead>
-            <tbody>
+          <>
+            <div className="list-heading">
+              <p>Coin Type</p>
+              <p>USD</p>
+              <p>EURO</p>
+            </div>
+            <div className="list-items">
               {coinData.map(item => (
                 <CryptocurrencyItem item={item} key={item.id} />
               ))}
-            </tbody>
-          </Table>
+            </div>
+          </>
         )}
       </div>
     )
